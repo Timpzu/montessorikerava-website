@@ -1,0 +1,208 @@
+/*
+Theme Name: Montessoripäiväkoti Mio
+Author: Timo
+Version: 1.0
+*/
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3, h4, h5 {
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+}
+h1 {
+  font-size: 52px;
+  margin-bottom: 40px;
+}
+h2 {
+  font-size: 45px;
+  margin: 36px 0;
+}
+h3 {
+  font-size: 34px;
+  margin: 28px 0;
+}
+h4 {
+  font-size: 24px;
+  margin: 24px 0;
+}
+p {
+  font-size: 17px;
+  line-height: 24px;
+  margin: 23px 0;
+}
+.lede {
+  font-size: 20px;
+  line-height: 30px;
+}
+.lede i {
+  vertical-align: bottom;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+header, section, div, footer, nav {
+  padding: 1px 0;
+}
+.fill {
+  height: 280px;
+  width: 100%;
+  background: #eee;
+  margin-bottom: 24px;
+}
+#main-nav ul {
+  display: flex;
+  margin: 0 0 0 20px;
+  margin-left: 0;
+  padding: 0;
+  list-style: none;
+}
+#main-nav ul li a,
+#main-nav ul li a:visited {
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 24px 20px;
+}
+#main-nav ul li a:hover {
+  color: orange;
+}
+#main-nav .nav-btn {
+  display: none;
+}
+.nav-btn {
+  background: none;
+  border: none;
+  height: 64px;
+  width: 64px;
+  cursor: pointer;
+}
+.nav-btn i {
+  font-size: 32px;
+  color: #000;
+}
+.nav-btn i:hover {
+  color: orange;
+}
+header {
+  position: relative;
+}
+.header-heading {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.header-heading .row{
+  height: 100%;
+}
+.placeholder {
+  height: 480px;
+  width: 100%;
+  background: #eee;
+}
+.placeholder-page {
+  height: 280px;
+  width: 100%;
+  background: #eee;
+}
+.btn-green {
+  padding: 16px 16px;
+  background-color: green;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+}
+.btn-green:hover {
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12),0 3px 5px -1px rgba(0,0,0,0.3);
+}
+.row {
+  padding: 24px 0 24px 0;
+}
+.row:last-child {
+  padding-bottom: 48px;
+}
+.chess .row:nth-child(odd) {
+  background-color: #fff;
+}
+.chess .row:nth-child(even) {
+  background-color: lightblue;
+  color: #fff;
+}
+.chess .row {
+  padding-bottom: 48px;
+}
+.dropdown-heading {
+  display: inline-flex;
+  width: 100%;
+  padding: 24px 20px;
+  background-color: blue;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+}
+.dropdown-heading:hover {
+  cursor: pointer;
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12),0 3px 5px -1px rgba(0,0,0,0.3);
+}
+.dropdown-heading i {
+  margin-left: auto;
+  font-size: 34px;
+  color: #fff;
+}
+.dropdown h3 {
+  margin: 0;
+  color: #fff;
+}
+.dropdown-content {
+  display: none;
+}
+.dropdown-content.dvisible {
+  display: block;
+}
+.footer-main {
+  background-color: blue;
+  color: #fff;
+  line-height: 24px;
+}
+.footer-main h4 {
+  color: green;
+}
+#footer-nav ul {
+  display: flex;
+  padding: 0;
+  margin-left: -12px;
+  margin-bottom: -12px;
+}
+#footer-nav ul li a,
+#footer-nav ul li a:visited {
+  display: inline-block;
+  padding: 12px 12px;
+  color: green;
+  text-decoration: none;
+}
+#footer-nav ul li a:hover {
+  color: orange;
+}
+/* Media queries */
+@media screen and (max-width: 768px) {
+  #main-nav ul.resposive-nav {
+    display: none;
+  }
+  #main-nav ul.visible {
+    display: block;
+  }
+  #main-nav .nav-btn {
+    display: block;
+    margin-left: auto;
+  }
+  #main-nav ul li a,
+  #main-nav ul li a:visited {
+    padding: 20px 24px;
+  }
+}
