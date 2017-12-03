@@ -45,10 +45,10 @@ ul {
 header, section, div, footer, nav {
   padding: 1px 0;
 }
-.fill {
-  height: 280px;
-  width: 100%;
-  background: #eee;
+.widget {
+  list-style: none;
+}
+.widget_container {
   margin-bottom: 24px;
 }
 #main-nav ul {
@@ -61,7 +61,7 @@ header, section, div, footer, nav {
 #main-nav ul li a,
 #main-nav ul li a:visited {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
   color: inherit;
   display: block;
@@ -90,18 +90,22 @@ header, section, div, footer, nav {
 header {
   position: relative;
 }
+.main-header {
+  height: 480px;
+  background-size: cover;
+  background-position: 80% center;
+}
 .header-heading {
   position: absolute;
   top: 0;
   bottom: 0;
 }
+.header-heading h1,
+.header-heading h2 {
+  color: #fff;
+}
 .header-heading .row{
   height: 100%;
-}
-.placeholder {
-  height: 480px;
-  width: 100%;
-  background: #eee;
 }
 .placeholder-page {
   height: 280px;
@@ -191,7 +195,7 @@ header {
 }
 /* Media queries */
 @media screen and (max-width: 768px) {
-  #main-nav ul.resposive-nav {
+  #main-nav ul {
     display: none;
   }
   #main-nav ul.visible {
@@ -205,4 +209,7 @@ header {
   #main-nav ul li a:visited {
     padding: 20px 24px;
   }
+}
+img {
+  width: 100%;
 }

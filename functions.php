@@ -28,24 +28,18 @@
   add_action('after_setup_theme', 'themeSetup');
 
   $args = array(
-    'width' => 1280,
-    'height' => 480,
     'default-image' => get_template_directory_uri() . '/img/montessori8.jpg',
     'uploads' => true,
+    'width' => 1280,
+    'height' => 480,
   );
   add_theme_support('custom-header', $args);
 
   // Register widget area
   function widgets_area_init() {
     register_sidebar(array(
-      'name' => '',
-      'id' => '',
-      'before_title' => '<h3>',
-      'after_title' => '</h3>'
-    ));
-    register_sidebar(array(
-      'name' => '',
-      'id' => '',
+      'name' => 'Some vempain',
+      'id' => 'some_widget',
       'before_title' => '<h3>',
       'after_title' => '</h3>'
     ));

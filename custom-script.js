@@ -1,9 +1,9 @@
 function menuBtn() {
-  var x = document.getElementById('topnav');
-  if (x.className === "resposive-nav") {
+  var x = document.querySelector(".menu");
+  if (x.className === "menu") {
     x.className += " visible";
   }
   else {
-    x.className = "visible";
+    x.className = "menu";
   }
 }

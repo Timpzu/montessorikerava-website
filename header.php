@@ -13,10 +13,10 @@
     <nav class="container-fluid" id="main-nav">
       <div class="col-md-6 offset-md-3">
         <button onclick="menuBtn()" class="nav-btn"><i class="material-icons">menu</i></button>
-        <ul class="resposive-nav" id="topnav">
-          <li><a href="#">Lorem</a></li>
-          <li><a href="#">Ipsum</a></li>
-          <li><a href="#">Septum</a></li>
-          <li><a href="#">Laudatum</a></li>
-        </ul>
+        <?php
+          $args = array(
+            'theme_location' => 'primary'
+          );
+        ?>
+        <?php wp_nav_menu($args); ?>
     </nav>
