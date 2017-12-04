@@ -12,16 +12,15 @@
 <main class="container-fluid chess">
   <div class="row">
     <section class="col-md-6 offset-md-3" id="about">
-      <h3>Montessoripäiväkoti keravalla</h3>
-      <p>
-        Montessoripäiväkoti Mio tarjoaa laadukasta varhaiskasvatusta ja
-        esiopetusta 1,5 - 6-vuotiaille keravalaisille ja lähikuntien lapsille.
-        Montessoripedagogiikka on aatteellisesti sitoutumaton kasvatusmenetelmä,
-        jossa lapsi kohdataan yksilönä ja hän saa oppia omassa tahdissaan
-        rauhallisessa ympäristössä. Päiväkotia ylläpitää voittoa tavoittelematon
-        Keravan Montessoripäiväkodin kannatusyhdistys ry ja kaikki toiminnan
-        tuotot käytetään päiväkodin lasten hyväksi.
-      </p>
+      <?php
+        if (have_posts()) :
+          while (have_posts()) : the_post(); ?>
+          <p><?php the_content() ?></p>
+       <?php endwhile;
+       else :
+         echo "<p>Sisältö ei löytyny.</p>";
+       endif;
+       ?>
     </section>
   </div>
   <div class="row">

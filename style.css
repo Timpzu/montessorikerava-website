@@ -50,6 +50,7 @@ header, section, div, footer, nav {
 }
 .widget_container {
   margin-bottom: 24px;
+  width: 100%;
 }
 #main-nav ul {
   display: flex;
@@ -95,6 +96,12 @@ header {
   background-size: cover;
   background-position: 80% center;
 }
+.page-header {
+  min-height: 280px;
+  background-size: cover;
+  background-position: center;
+  background-color: #5e5e5e;
+}
 .header-heading {
   position: absolute;
   top: 0;
@@ -106,11 +113,6 @@ header {
 }
 .header-heading .row{
   height: 100%;
-}
-.placeholder-page {
-  height: 280px;
-  width: 100%;
-  background: #eee;
 }
 .btn-green {
   padding: 16px 16px;
@@ -128,7 +130,7 @@ header {
   box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12),0 3px 5px -1px rgba(0,0,0,0.3);
 }
 .row {
-  padding: 24px 0 24px 0;
+  padding: 12px 0;
 }
 .row:last-child {
   padding-bottom: 48px;
@@ -159,16 +161,54 @@ header {
   font-size: 34px;
   color: #fff;
 }
-.dropdown h3 {
+h3.dropdown-heading {
   margin: 0;
   color: #fff;
 }
+
+
+.haitari h3 {
+  display: inline-flex;
+  width: 100%;
+  padding: 24px 20px;
+  margin: 0;
+  background-color: blue;
+  color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+}
+.haitari h3:hover {
+  cursor: pointer;
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12),0 3px 5px -1px rgba(0,0,0,0.3);
+}
+.haitari h3 i {
+  margin-left: auto;
+  font-size: 34px;
+  color: #fff;
+}
+.haitari div.textwidget {
+  display: none;
+}
+.haitari div.textwidget.dvisible {
+  display: block;
+}
+
+
+
+
+
+
+
 .dropdown-content {
   display: none;
 }
 .dropdown-content.dvisible {
   display: block;
 }
+
+
+
+
+
 .footer-main {
   background-color: blue;
   color: #fff;
@@ -212,4 +252,10 @@ header {
 }
 img {
   width: 100%;
+}
+input
+{
+    background-color: green;
+    color: #000;
+    width: 50%;
 }
