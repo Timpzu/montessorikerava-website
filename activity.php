@@ -25,41 +25,41 @@
        ?>
     </section>
   </div>
+  <?php if (is_active_sidebar('activity_widget_1')) : ?>
   <div class="row">
-    <?php if (is_active_sidebar('activity_widget_1')) : ?>
       <section class="dropdown col-md-6 offset-md-3">
         <div>
           <?php dynamic_sidebar('activity_widget_1'); ?>
         </div>
       </section>
-    <?php endif; ?>
   </div>
+  <?php endif; ?>
+  <?php if (is_active_sidebar('activity_widget_2')) : ?>
   <div class="row">
-    <?php if (is_active_sidebar('activity_widget_1')) : ?>
       <section class="dropdown col-md-6 offset-md-3">
         <div>
-          <?php dynamic_sidebar('activity_widget_1'); ?>
+          <?php dynamic_sidebar('activity_widget_2'); ?>
         </div>
       </section>
-    <?php endif; ?>
   </div>
+  <?php endif; ?>
+  <?php if (is_active_sidebar('activity_widget_3')) : ?>
   <div class="row">
-    <?php if (is_active_sidebar('activity_widget_1')) : ?>
       <section class="dropdown col-md-6 offset-md-3">
         <div>
-          <?php dynamic_sidebar('activity_widget_1'); ?>
+          <?php dynamic_sidebar('activity_widget_3'); ?>
         </div>
       </section>
-    <?php endif; ?>
   </div>
+  <?php endif; ?>
+  <?php if (is_active_sidebar('activity_widget_4')) : ?>
   <div class="row">
-    <?php if (is_active_sidebar('activity_widget_1')) : ?>
       <section class="dropdown col-md-6 offset-md-3">
         <div>
-          <?php dynamic_sidebar('activity_widget_1'); ?>
+          <?php dynamic_sidebar('activity_widget_4'); ?>
         </div>
       </section>
-    <?php endif; ?>
   </div>
+  <?php endif; ?>
 </main>
 <?php get_footer(); ?>

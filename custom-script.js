@@ -10,9 +10,12 @@ window.onload = function() {
     }
   }
   // Accordion action
-  document.querySelector(".haitari > h3").onclick = function() {
-    toggleButton(event.target);
-  };
+  var elems = document.querySelectorAll(".haitari > h3");
+  for (var i = 0; i < elems.length; i++) {
+    elems[i].onclick = function() {
+      toggleButton(event.target);
+    }
+  }
   function handleBtnKeyPress(event) {
     if (event.key === " " || event.key === "Enter") {
       event.preventDefault();

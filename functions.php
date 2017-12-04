@@ -69,6 +69,24 @@
       'before_title' => '<h3>',
       'after_title' => '</h3>'
     ));
+    register_sidebar(array(
+      'name' => 'Toiminta 2',
+      'id' => 'activity_widget_2',
+      'before_title' => '<h3>',
+      'after_title' => '</h3>'
+    ));
+    register_sidebar(array(
+      'name' => 'Toiminta 3',
+      'id' => 'activity_widget_3',
+      'before_title' => '<h3>',
+      'after_title' => '</h3>'
+    ));
+    register_sidebar(array(
+      'name' => 'Toiminta 4',
+      'id' => 'activity_widget_4',
+      'before_title' => '<h3>',
+      'after_title' => '</h3>'
+    ));
   }
   add_action('widgets_init','widgets_area_init');
 ?>
