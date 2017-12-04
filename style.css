@@ -31,13 +31,6 @@ p {
   line-height: 24px;
   margin: 23px 0;
 }
-.lede {
-  font-size: 20px;
-  line-height: 30px;
-}
-.lede i {
-  vertical-align: bottom;
-}
 ul {
   padding: 0;
   list-style: none;
@@ -145,26 +138,28 @@ header {
 .chess .row {
   padding-bottom: 48px;
 }
-.dropdown-heading {
-  display: inline-flex;
-  width: 100%;
-  padding: 24px 20px;
-  background-color: blue;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
-}
-.dropdown-heading:hover {
-  cursor: pointer;
-  box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12),0 3px 5px -1px rgba(0,0,0,0.3);
-}
-.dropdown-heading i {
-  margin-left: auto;
-  font-size: 34px;
+
+tbody tr:nth-child(even) {
+  background-color: lightblue;
   color: #fff;
 }
-h3.dropdown-heading {
-  margin: 0;
-  color: #fff;
+
+/*tbody tr:before,
+tbody tr:after {
+  content: "";
+  position: absolute;
+  background: #663399;
+  top: 0;
+  bottom: 0;
+  width: 9999px;
 }
+tbody tr:before {
+  right: 100%;
+}
+tbody tr:after {
+  left: 100%;
+}*/
+
 
 
 .haitari h3 {
@@ -191,24 +186,6 @@ h3.dropdown-heading {
 .haitari div.textwidget.dvisible {
   display: block;
 }
-
-
-
-
-
-
-
-.dropdown-content {
-  display: none;
-}
-.dropdown-content.dvisible {
-  display: block;
-}
-
-
-
-
-
 .footer-main {
   background-color: blue;
   color: #fff;
@@ -250,12 +227,10 @@ h3.dropdown-heading {
     padding: 20px 24px;
   }
 }
-img {
-  width: 100%;
+.ingressi {
+  font-size: 19px;
+  line-height: 28px;
 }
-input
-{
-    background-color: green;
-    color: #000;
-    width: 50%;
+.ingressi i {
+  vertical-align: bottom;
 }

@@ -13,26 +13,24 @@
 <main class="container-fluid">
   <div class="row">
     <div class="col-md-6 offset-md-3">
-      <ul class="lede">
-        <li>Kääpäkatu 5, 04260</li>
-        <li><i class="material-icons">phone</i> 040 527 2456</li>
-        <li><i class="material-icons">email</i> info@montessorikerava.fi</li>
-      </ul>
-    </div>
-    <div class="col-md-6 offset-md-3">
-      <p>
-        <span class="lede">Montessoripäiväkoti sijaitsee Keravalla kanniston kaupunginosassa.
-        Toimimme Keravan kaupungilta vuokratuissa, viihtyisissä ja hiljattain
-        remontoiduissa tiloissa.</span>
-      </p>
+      <?php
+        if (have_posts()) :
+          while (have_posts()) : the_post(); ?>
+          <p><?php the_content() ?></p>
+       <?php endwhile;
+       else :
+         echo "<p>Sisältö ei löytyny.</p>";
+       endif;
+       ?>
     </div>
   </div>
+  <?php if (is_active_sidebar('contacts_widget_1')) : ?>
   <div class="row">
     <section class="col-md-6 offset-md-3">
-      <h3>Henkilöstö</h3>
-      <div class="fill"></div>
+      <?php dynamic_sidebar('contacts_widget_1'); ?>
     </section>
   </div>
+  <?php endif; ?>
   <div class="row">
     <section class="col-md-6 offset-md-3">
       <h3>Poikkea käymään</h3>
@@ -40,14 +38,14 @@
 src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJec36TJsAkkYRR9LQDvVV6PA&key=AIzaSyD2iBHRZAiIFckx7MElaA5VbzPqM0RqhvE&language=fi" allowfullscreen></iframe>
     </section>
   </div>
+  <?php if (is_active_sidebar('contacts_widget_2')) : ?>
   <div class="row">
     <section class="col-md-6 offset-md-3">
-      <?php if (is_active_sidebar('contacts_widget_2')) : ?>
         <div class="widget_container">
           <?php dynamic_sidebar('contacts_widget_2'); ?>
         </div>
-      <?php endif; ?>
     </section>
   </div>
+  <?php endif; ?>
 </main>
 <?php get_footer(); ?>

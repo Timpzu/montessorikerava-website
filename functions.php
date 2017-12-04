@@ -52,6 +52,12 @@
       'after_title' => '</h3>'
     ));
     register_sidebar(array(
+      'name' => 'Yhteystiedot 1',
+      'id' => 'contacts_widget_1',
+      'before_title' => '<h3>',
+      'after_title' => '</h3>'
+    ));
+    register_sidebar(array(
       'name' => 'Yhteystiedot 2',
       'id' => 'contacts_widget_2',
       'before_title' => '<h3>',

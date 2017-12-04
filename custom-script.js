@@ -33,4 +33,15 @@ window.onload = function() {
       x.className = "textwidget";
     }
   }
+  // Lohkot
+  var tbody = document.querySelector('tbody');
+  tbody.className = "container-fluid";
+  var trows = document.querySelectorAll('tr');
+  for (var i = 0; i < trows.length; i++) {
+    trows[i].className = "row";
+  }
+  var tdata = document.querySelectorAll('td');
+  for (var i = 0; i < tdata.length; i++) {
+    tdata[i].className = "col-md-6 offset-md-3";
+  }
 }
