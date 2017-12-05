@@ -9,8 +9,8 @@
     </div>
   </div>
 </header>
-<main class="container-fluid chess">
-  <div class="row">
+<main class="container-fluid">
+  <div class="">
     <section class="col-md-6 offset-md-3" id="about">
       <?php
         if (have_posts()) :
@@ -23,7 +23,7 @@
        ?>
     </section>
   </div>
-  <div class="row">
+  <div class="row row row-dark">
     <section class="col-md-6 offset-md-3">
       <h3>Vanhempien suositukset</h3>
       <div class="fill"></div>

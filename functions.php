@@ -95,4 +95,17 @@
     ));
   }
   add_action('widgets_init','widgets_area_init');
+
+// Add Custom Quicktags to Text Editor
+function smackdown_add_quicktags() {
+
+	if ( wp_script_is( 'quicktags' ) ) { ?>
+		<script type="text/javascript">
+			QTags.addButton( 'row', 'Uusi osio', '<div class="row"><section class="col-md-6 offset-md-3">', '</section></div>', '', '', 1 );
+      QTags.addButton( 'row_dark', 'Uusi osio, tumma', '<div class="row row-dark"><section class="col-md-6 offset-md-3">', '</section></div>', '', '', 1 );
+		</script>
+	<?php }
+
+}
+add_action( 'admin_print_footer_scripts', 'smackdown_add_quicktags' );
 ?>

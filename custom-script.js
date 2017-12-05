@@ -1,14 +1,15 @@
+function menuBtn() {
+  var x = document.querySelector(".menu");
+  if (x.className === "menu") {
+    x.className += " visible";
+  }
+  else {
+    x.className = "menu";
+  }
+}
 window.onload = function() {
   // Menu button
-  function menuBtn() {
-    var x = document.querySelector(".menu");
-    if (x.className === "menu") {
-      x.className += " visible";
-    }
-    else {
-      x.className = "menu";
-    }
-  }
+
   // Accordion action
   var elems = document.querySelectorAll(".haitari > h3");
   for (var i = 0; i < elems.length; i++) {
@@ -32,16 +33,5 @@ window.onload = function() {
     else {
       x.className = "textwidget";
     }
-  }
-  // Lohkot
-  var tbody = document.querySelector('tbody');
-  tbody.className = "container-fluid";
-  var trows = document.querySelectorAll('tr');
-  for (var i = 0; i < trows.length; i++) {
-    trows[i].className = "row";
-  }
-  var tdata = document.querySelectorAll('td');
-  for (var i = 0; i < tdata.length; i++) {
-    tdata[i].className = "col-md-6 offset-md-3";
   }
 }

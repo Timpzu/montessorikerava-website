@@ -11,19 +11,15 @@
   </div>
   <div class="placeholder-page"></div>
 </header>
-<main>
-  <div>
-    <section>
-      <?php
-        if (have_posts()) :
-          while (have_posts()) : the_post(); ?>
-          <p><?php the_content() ?></p>
-       <?php endwhile;
-       else :
-         echo "<p>Sisältöä ei löytyny.</p>";
-       endif;
-       ?>
-    </section>
-  </div>
+<main class="container-fluid">
+  <?php
+    if (have_posts()) :
+      while (have_posts()) : the_post(); ?>
+      <p><?php the_content() ?></p>
+   <?php endwhile;
+   else :
+     echo "<p>Sisältöä ei löytyny.</p>";
+   endif;
+   ?>
 </main>
 <?php get_footer(); ?>
