@@ -20,13 +20,13 @@
         ?>
         <?php wp_nav_menu($args); ?>
     </nav>
-    <header class="main-header" style="background-image:url(<?php header_image(); ?>);">
+    <?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
+    <header class="page-header" style="background-image:url('<?php echo $backgroundImg[0]; ?>');">
       <div class="container-fluid header-heading">
         <div class="row align-items-center">
-          <section class="col-md-5 offset-md-3" id="intro">
-            <h1>Auta minua tekemään itse.</h1>
-            <button type="button" name="button" class="btn-green">Hae paikkaa</button>
-          </section>
+          <div class="col-md-5 offset-md-3">
+            <h2><?php the_title()?></h2>
+          </div>
         </div>
       </div>
     </header>

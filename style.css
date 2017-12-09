@@ -161,9 +161,6 @@ header:before {
 .row:last-child {
   padding-bottom: 48px;
 }
-.chess .row {
-  padding-bottom: 48px;
-}
 .row-dark {
   background-color: #0284A8;
   color: #fff;
@@ -186,11 +183,15 @@ header:before {
   font-size: 34px;
   color: #fff;
 }
-.haitari div.textwidget {
+.haitari p {
   display: none;
 }
-.haitari div.textwidget.dvisible {
+.haitari p.visible {
   display: block;
+}
+.person img {
+  width: 100%;
+  height: auto;
 }
 .footer-main {
   background-color: #02547D;

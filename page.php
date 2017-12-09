@@ -1,19 +1,18 @@
-<?php get_header(); ?>
+<?php get_header('page'); ?>
 <main>
   <div class="container-fluid">
-    <div class="row">
-      <section class="col-md-6 offset-md-3">
+    <div class="row justify-content-center">
+      <section class="col-md-6">
         <?php
           if (have_posts()) :
             while (have_posts()) : the_post(); ?>
-            <p><?php the_content() ?></p>
+              <?php the_content(); ?>
          <?php endwhile;
          else :
-           echo "<p>Sisältö ei löytyny.</p>";
+           echo "<p>Sisältöä ei löytynyt.</p>";
          endif;
          ?>
       </section>
     </div>
-  </div>
 </main>
 <?php get_footer(); ?>

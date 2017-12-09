@@ -1,65 +1,34 @@
 <?php /* Template Name: Toiminta */ ?>
-<?php get_header(); ?>
-<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
-<header class="page-header" style="background-image:url('<?php echo $backgroundImg[0]; ?>');">
-  <div class="container-fluid header-heading">
-    <div class="row align-items-center">
-      <div class="col-md-5 offset-md-3">
-        <h2><?php the_title()?></h2>
-      </div>
-    </div>
-  </div>
-  <div class="placeholder-page"></div>
-</header>
+<?php get_header('page'); ?>
 <main class="container-fluid">
-  <div class="row">
-    <section class="col-md-6 offset-md-3">
+  <div class="row justify-content-center">
+    <section class="col-md-6">
       <?php
         if (have_posts()) :
           while (have_posts()) : the_post(); ?>
-          <p><?php the_content() ?></p>
-       <?php endwhile;
-       else :
-         echo "<p>Sisältö ei löytyny.</p>";
-       endif;
+            <?php the_content() ?>
+          <?php endwhile;
+        else :
+          echo "<p>Sisältöä ei löytynyt.</p>";
+        endif;
        ?>
     </section>
   </div>
-  <?php if (is_active_sidebar('activity_widget_1')) : ?>
-  <div class="row">
-      <section class="dropdown col-md-6 offset-md-3">
-        <div>
-          <?php dynamic_sidebar('activity_widget_1'); ?>
+  <?php if( have_rows('haitarit') ): ?>
+      <?php while( have_rows('haitarit') ): the_row();
+        $heading = get_sub_field('heading');
+        $content = get_sub_field('content');
+      ?>
+      <div class="row justify-content-center">
+        <div class="col-md-6 haitari">
+          <h3 role="button" tabindex="0" aria-pressed="false" onclick="handleBtnClick(event)" onKeyPress="handleBtnKeyPress(event)">
+            <?php echo $heading; ?>
+            <i class="material-icons">arrow_drop_down</i>
+          </h3>
+          <p><?php echo $content; ?></p>
         </div>
-      </section>
-  </div>
-  <?php endif; ?>
-  <?php if (is_active_sidebar('activity_widget_2')) : ?>
-  <div class="row">
-      <section class="dropdown col-md-6 offset-md-3">
-        <div>
-          <?php dynamic_sidebar('activity_widget_2'); ?>
-        </div>
-      </section>
-  </div>
-  <?php endif; ?>
-  <?php if (is_active_sidebar('activity_widget_3')) : ?>
-  <div class="row">
-      <section class="dropdown col-md-6 offset-md-3">
-        <div>
-          <?php dynamic_sidebar('activity_widget_3'); ?>
-        </div>
-      </section>
-  </div>
-  <?php endif; ?>
-  <?php if (is_active_sidebar('activity_widget_4')) : ?>
-  <div class="row">
-      <section class="dropdown col-md-6 offset-md-3">
-        <div>
-          <?php dynamic_sidebar('activity_widget_4'); ?>
-        </div>
-      </section>
-  </div>
+      </div>
+    <?php endwhile; ?>
   <?php endif; ?>
 </main>
 <?php get_footer(); ?>
