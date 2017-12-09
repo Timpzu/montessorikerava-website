@@ -24,8 +24,10 @@
       <div class="container-fluid header-heading">
         <div class="row align-items-center">
           <section class="col-md-5 offset-md-3" id="intro">
-            <h1>Auta minua tekemään itse.</h1>
-            <button type="button" name="button" class="btn-green">Hae paikkaa</button>
+            <h1><?php echo get_theme_mod('mkw_heading'); ?></h1>
+            <?php if (get_theme_mod('mkw_headline_btn_display') == 'Yes'): ?>
+              <a href="<?php echo get_permalink(get_theme_mod('mkw_headline_link')); ?>" role="button" tabindex="0" class="btn-green" onclick="handleBtnClick(event)" onKeyPress="handleBtnKeyPress(event)"><?php echo get_theme_mod('mkw_headline_btn'); ?></a>
+            <?php endif; ?>
           </section>
         </div>
       </div>

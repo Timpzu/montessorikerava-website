@@ -1,6 +1,6 @@
 <?php /* Template Name: Pedagogiikka */ ?>
 <?php get_header('page'); ?>
-<main class="container-fluid">
+<main class="container-fluid chess">
   <div class="row justify-content-center">
     <section class="col-md-6">
       <?php

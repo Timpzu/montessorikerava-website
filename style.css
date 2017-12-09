@@ -140,6 +140,11 @@ header:before {
 .header-heading .row{
   height: 100%;
 }
+a.btn-green,
+a:visited.btn-green
+ {
+   text-decoration: none;
+}
 .btn-green {
   padding: 16px 16px;
   background-color: #07B57B;
@@ -161,9 +166,12 @@ header:before {
 .row:last-child {
   padding-bottom: 48px;
 }
-.row-dark {
+.chess .row:nth-child(even) {
   background-color: #0284A8;
   color: #fff;
+}
+.chess .row:nth-child(odd) {
+  background-color: #fff;
 }
 .haitari h3 {
   display: inline-flex;

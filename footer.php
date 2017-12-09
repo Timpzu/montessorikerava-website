@@ -11,10 +11,12 @@
       </ul>
     </section>
     <nav class="col-md-6 offset-md-3" id="footer-nav">
-      <ul>
-        <li><a href="#">Rekisteriseloste</a></li>
-        <li><a href="#">Rekisteriseloste</a></li>
-      </ul>
+      <?php
+        $args = array(
+          'theme_location' => 'footer'
+        );
+      ?>
+      <?php wp_nav_menu($args); ?>
     </nav>
   </div>
 </footer>

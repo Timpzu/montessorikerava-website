@@ -15,7 +15,9 @@ function handleBtnClick(event) {
 function handleBtnKeyPress(event) {
   if (event.key === " " || event.key === "Enter") {
     event.preventDefault();
-    toggleButton(event.target);
+    if (event.target.hasAttribute('aria-pressed')) {
+      toggleButton(event.target);
+    }
   }
 }
 function toggleButton(element) {
