@@ -6,7 +6,6 @@
     <title><?php bloginfo('name') ?></title>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600|Open+Sans:400,600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>

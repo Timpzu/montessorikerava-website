@@ -19,12 +19,14 @@
     	<div class="row justify-content-center">
     	  <?php while( have_rows('henkilokunta') ): the_row();
       		$name = get_sub_field('name');
+          $contact = get_sub_field('contact');
       		$title = get_sub_field('title');
       		$photo = get_sub_field('photo');
     		?>
-    		<div class="col-md-2 person">
+    		<div class="col-md-3 person">
           <img src="<?php echo $photo['url']; ?>" alt="<?php echo $photo['alt'] ?>" />
           <h4><?php echo $name; ?></h4>
+          <span><?php echo $contact; ?></span>
           <p><?php echo $title; ?></p>
     		</div>
     	<?php endwhile; ?>

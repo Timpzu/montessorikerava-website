@@ -20,13 +20,15 @@
         $content = get_sub_field('content');
       ?>
       <div class="row justify-content-center">
-        <div class="col-md-6 haitari">
-          <h3 role="button" tabindex="0" aria-pressed="false" onclick="handleBtnClick(event)" onKeyPress="handleBtnKeyPress(event)">
+        <section class="col-md-6 haitari">
+          <h3 class="haitari-btn" role="button" tabindex="0" aria-pressed="false" onclick="handleBtnClick(event)" onKeyPress="handleBtnKeyPress(event)">
             <?php echo $heading; ?>
             <i class="material-icons">arrow_drop_down</i>
           </h3>
-          <p><?php echo $content; ?></p>
-        </div>
+          <div>
+            <?php echo $content; ?>
+          </div>
+        </section>
       </div>
     <?php endwhile; ?>
   <?php endif; ?>
