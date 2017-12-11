@@ -2,7 +2,7 @@
 <?php get_header('page'); ?>
 <main class="container-fluid chess">
   <div class="row justify-content-center">
-    <section class="col-md-6">
+    <section class="col-lg-6 col-md-8">
       <?php
         if (have_posts()) :
           while (have_posts()) : the_post(); ?>
@@ -20,7 +20,7 @@
       $content = get_sub_field('content');
        ?>
       <div class="row justify-content-center">
-        <div class="col-md-6">
+        <div class="col-lg-6 col-md-8">
           <h3><?php echo $heading; ?></h3>
           <p><?php echo $content; ?></p>
         </div>

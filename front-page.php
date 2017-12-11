@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main class="container-fluid chess">
   <div class="row justify-content-center">
-    <section class="col-md-6">
+    <section class="col-lg-6 col-md-8">
       <?php
         if (have_posts()) :
           while (have_posts()) : the_post(); ?>
@@ -14,25 +14,25 @@
     </section>
   </div>
   <?php if( have_rows('comments') ): ?>
-    <div class="row justify-content-center">
-      <section class="col-md-6">
-        <h3>Vanhempien kommentit</h3>
-        <div class="">
+    <div class="row justify-content-center comments">
+      <section class="col-lg-6 col-md-8">
+        <h3 class="y">Vanhempien kommentit</h3>
+        <div class="x">
           <?php while( have_rows('comments') ): the_row();
             $content = get_sub_field('comment');
             $name = get_sub_field('title');
           ?>
-          <p class="mySlides"><?php echo $content; ?></p>
+          <p class="mySlides">“<cite><?php echo $content; ?></cite>”</p>
           <?php endwhile; ?>
-          <button class="" onclick="plusDivs(-1)">&#10094;</button>
-          <button class="" onclick="plusDivs(+1)">&#10095;</button>
+          <button class="material-icons carousel-btn carousel-btn-left" onclick="plusDivs(-1)">&#xE314;</button>
+          <button class="material-icons carousel-btn carousel-btn-right" onclick="plusDivs(+1)">&#xE315;</button>
         </div>
       </section>
     </div>
   <?php endif; ?>
   <?php if (is_active_sidebar('front_page_widget')) : ?>
     <div class="row justify-content-center">
-      <section class="col-md-6">
+      <section class="col-lg-6 col-md-8">
         <?php dynamic_sidebar('front_page_widget'); ?>
       </section>
     </div>

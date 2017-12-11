@@ -1,6 +1,6 @@
 <footer class="container-fluid footer-main">
-  <div class="row">
-    <section class="col-md-6 offset-md-3">
+  <div class="row justify-content-center">
+    <section class="col-lg-6 col-md-8">
       <h4>Yhteystiedot</h4>
       <ul id="footer-contacts">
         <li>Montessoripäiväkoti Mio</li>
@@ -10,7 +10,9 @@
         <li>Auki arkipäivisin klo 7-17</li>
       </ul>
     </section>
-    <nav class="col-md-6 offset-md-3" id="footer-nav">
+  </div>
+  <div class="row justify-content-center">
+    <nav class="col-lg-6 col-md-8" id="footer-nav">
       <?php
         $args = array(
           'theme_location' => 'footer'

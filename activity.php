@@ -2,7 +2,7 @@
 <?php get_header('page'); ?>
 <main class="container-fluid">
   <div class="row justify-content-center">
-    <section class="col-md-6">
+    <section class="col-lg-6 col-md-8">
       <?php
         if (have_posts()) :
           while (have_posts()) : the_post(); ?>
@@ -20,7 +20,7 @@
         $content = get_sub_field('content');
       ?>
       <div class="row justify-content-center">
-        <section class="col-md-6 haitari">
+        <section class="col-lg-6 col-md-8 haitari">
           <h3 class="haitari-btn" role="button" tabindex="0" aria-pressed="false" onclick="handleBtnClick(event)" onKeyPress="handleBtnKeyPress(event)">
             <?php echo $heading; ?>
             <i class="material-icons">arrow_drop_down</i>

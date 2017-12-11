@@ -2,7 +2,7 @@
 <?php get_header('page'); ?>
 <main class="container-fluid">
   <div class="row justify-content-center">
-    <section class="col-md-6">
+    <section class="col-lg-6 col-md-8">
       <?php
         if (have_posts()) :
           while (have_posts()) : the_post(); ?>
@@ -16,7 +16,7 @@
   </div>
   <?php if (is_active_sidebar('daycare_widget')) : ?>
     <div class="row justify-content-center">
-      <section class="col-md-6">
+      <section class="col-lg-6 col-md-8">
         <?php dynamic_sidebar('daycare_widget'); ?>
       </section>
     </div>
