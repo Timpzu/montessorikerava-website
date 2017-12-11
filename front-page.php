@@ -16,8 +16,8 @@
   <?php if( have_rows('comments') ): ?>
     <div class="row justify-content-center comments">
       <section class="col-lg-6 col-md-8">
-        <h3 class="y">Vanhempien kommentit</h3>
-        <div class="x">
+        <h3>Vanhempien kommentit</h3>
+        <div class="comments-carousel">
           <?php while( have_rows('comments') ): the_row();
             $content = get_sub_field('comment');
             $name = get_sub_field('title');

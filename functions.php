@@ -67,7 +67,7 @@
   function montessorikerava_customize_register( $wp_customize ) {
     // Custom header
   	$wp_customize->add_section('mkw_headline_section', array(
-  		'title' => 'Ylätunnisteen otsikko',
+  		'title' => 'Ylätunniste',
   		'priority' => 30,
   	));
     $wp_customize->add_setting('mkw_heading', array(
@@ -103,6 +103,63 @@
   		'label' => 'Nappulan linkki',
   		'section' => 'mkw_headline_section',
   		'settings' => 'mkw_headline_link',
+      'type' => 'dropdown-pages',
+  	)));
+    // Custom footer
+    $wp_customize->add_section('mkw_footer_section', array(
+  		'title' => 'Alatunniste',
+  		'priority' => 31,
+  	));
+    $wp_customize->add_setting('mkw_footer_name', array(
+  		'default' => 'Montessoripäiväkoti Mio',
+  	));
+  	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'mkw_footer_name_control', array(
+  		'label' => 'Yhteisön nimi',
+  		'section' => 'mkw_footer_section',
+  		'settings' => 'mkw_footer_name',
+      'type' => 'text',
+  	)));
+    $wp_customize->add_setting('mkw_footer_address', array(
+  		'default' => 'Kääpäkatu 5, 04260 Kerava',
+  	));
+  	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'mkw_footer_address_control', array(
+  		'label' => 'Osoite',
+  		'section' => 'mkw_footer_section',
+  		'settings' => 'mkw_footer_address',
+      'type' => 'text',
+  	)));
+    $wp_customize->add_setting('mkw_footer_phone', array(
+  		'default' => 'Puhelin: 040 527 2456',
+  	));
+  	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'mkw_footer_phone_control', array(
+  		'label' => 'Puhelinnumero',
+  		'section' => 'mkw_footer_section',
+  		'settings' => 'mkw_footer_phone',
+      'type' => 'text',
+  	)));
+    $wp_customize->add_setting('mkw_footer_email', array(
+  		'default' => 'Sähköposti: info@montessorikerava.fi',
+  	));
+  	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'mkw_footer_email_control', array(
+  		'label' => 'Sähköpostiosoite',
+  		'section' => 'mkw_footer_section',
+  		'settings' => 'mkw_footer_email',
+      'type' => 'text',
+  	)));
+    $wp_customize->add_setting('mkw_footer_open', array(
+  		'default' => 'Auki arkipäivisin klo 7-17',
+  	));
+  	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'mkw_footer_open_control', array(
+  		'label' => 'Aukioloajat',
+  		'section' => 'mkw_footer_section',
+  		'settings' => 'mkw_footer_open',
+      'type' => 'textarea',
+  	)));
+    $wp_customize->add_setting('mkw_footer_heading_link', array());
+  	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'mkw_footer_heading_link_control', array(
+  		'label' => 'Otsikon linkki (älä muuta)',
+  		'section' => 'mkw_footer_section',
+  		'settings' => 'mkw_footer_heading_link',
       'type' => 'dropdown-pages',
   	)));
   }

@@ -36,6 +36,9 @@ ul {
   padding: 0;
   list-style: none;
 }
+a {
+  text-decoration: none;
+}
 header, section, div, footer, nav {
   padding: 1px 0;
 }
@@ -93,7 +96,6 @@ main.container-fluid {
 #main-nav ul li a:visited {
   font-size: 18px;
   font-weight: 600;
-  text-decoration: none;
   color: inherit;
   display: block;
   padding: 24px 18px;
@@ -187,7 +189,6 @@ header:before {
   font-size: 16px;
   font-weight: 500;
   color: #fff;
-  text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
   border: none;
@@ -256,8 +257,10 @@ header:before {
   background-color: #274C77;
   color: #fff;
   line-height: 24px;
+  padding-bottom: 36px;
 }
-.footer-main h4 {
+.footer-main a,
+.footer-main a:visited {
   color: #A4CA4E;
 }
 #footer-nav ul {
@@ -270,8 +273,6 @@ header:before {
 #footer-nav ul li a:visited {
   display: inline-block;
   padding: 12px 12px;
-  color: #A4CA4E;
-  text-decoration: none;
 }
 #footer-nav ul li a:hover {
   color: #FABC3C;
@@ -303,7 +304,6 @@ header:before {
 @media screen and (max-width: 576px) {
 
 }
-
 .ingressi {
   font-size: 19px;
   line-height: 28px;
@@ -311,9 +311,6 @@ header:before {
 .ingressi i {
   vertical-align: bottom;
 }
-
-
-
 .carousel-btn {
   position: relative;
   border: none;
@@ -331,19 +328,11 @@ header:before {
 .carousel-btn-right {
   right: -5%;
 }
-
-
-
-
-
-
-
-.x {
+.comments {
   padding-left: 30px;
   padding-right: 30px;
   text-align: center;
-
 }
-.y {
+.comments-carousel h3 {
   text-align: center;
 }
