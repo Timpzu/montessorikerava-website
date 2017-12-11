@@ -15,22 +15,26 @@
     </section>
   </div>
   <?php if( have_rows('henkilokunta') ): ?>
-  	<section class="row staff">
-      <h3 class="col-md-12">Henkilökunta</h3>
-  	  <?php while( have_rows('henkilokunta') ): the_row();
-    		$name = get_sub_field('name');
-        $contact = get_sub_field('contact');
-    		$title = get_sub_field('title');
-    		$photo = get_sub_field('photo');
-  		?>
-    		<article class="col-lg-6 col-md-8 person">
-          <img src="<?php echo $photo['url']; ?>" alt="<?php echo $photo['alt'] ?>" />
-          <h4><?php echo $name; ?></h4>
-          <span><?php echo $contact; ?></span>
-          <p><?php echo $title; ?></p>
-    		</article>
-      <?php endwhile; ?>
-    </section>
+  	<div class="row justify-content-center">
+      <section class="col-lg-6 col-md-8">
+        <h3>Henkilökunta</h3>
+        <div class="row">
+          <?php while( have_rows('henkilokunta') ): the_row();
+        		$name = get_sub_field('name');
+            $contact = get_sub_field('contact');
+        		$title = get_sub_field('title');
+        		$photo = get_sub_field('photo');
+      		?>
+            <article class="col-6 person">
+              <img src="<?php echo $photo['url']; ?>" alt="<?php echo $photo['alt'] ?>" />
+              <h4><?php echo $name; ?></h4>
+              <span><?php echo $contact; ?></span>
+              <p><?php echo $title; ?></p>
+        		</article>
+          <?php endwhile; ?>
+        </div>
+      </section>
+    </div>
   <?php endif; ?>
   <?php if (is_active_sidebar('contact_widget')) : ?>
     <div class="row justify-content-center">
