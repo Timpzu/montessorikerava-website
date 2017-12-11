@@ -13,19 +13,19 @@
        endif;
        ?>
     </section>
-    <?php if( have_rows('pedagogiikka') ): ?>
-    	<?php while( have_rows('pedagogiikka') ): the_row();
-      	$heading = get_sub_field('heading');
-      	$content = get_sub_field('content');
-    	   ?>
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <h3><?php echo $heading; ?></h3>
-            <p><?php echo $content; ?></p>
-          </div>
-        </div>
-      <?php endwhile; ?>
-    <?php endif; ?>
   </div>
+  <?php if( have_rows('pedagogiikka') ): ?>
+    <?php while( have_rows('pedagogiikka') ): the_row();
+      $heading = get_sub_field('heading');
+      $content = get_sub_field('content');
+       ?>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <h3><?php echo $heading; ?></h3>
+          <p><?php echo $content; ?></p>
+        </div>
+      </div>
+    <?php endwhile; ?>
+  <?php endif; ?>
 </main>
 <?php get_footer(); ?>

@@ -11,6 +11,7 @@
   <body <?php body_class(); ?>>
     <nav class="container-fluid" id="main-nav">
       <div class="col-md-6 offset-md-3">
+        <a href="<?php echo home_url(); ?>"><img id="emblem" src="<?php echo get_template_directory_uri() ?>/img/logo-nauha.svg"></a>
         <button onclick="menuBtn()" class="nav-btn"><i class="material-icons">menu</i></button>
         <?php
           $args = array(

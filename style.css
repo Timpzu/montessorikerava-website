@@ -16,7 +16,7 @@ h1 {
 }
 h2 {
   font-size: 45px;
-  margin: 36px 0;
+  margin-bottom: 36px;
 }
 h3 {
   font-size: 34px;
@@ -29,7 +29,7 @@ h4 {
 p {
   font-size: 17px;
   line-height: 24px;
-  margin: 23px 0;
+  margin-bottom: 23px;
 }
 ul {
   padding: 0;
@@ -38,18 +38,45 @@ ul {
 header, section, div, footer, nav {
   padding: 1px 0;
 }
+main.container-fluid {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.row {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  position: relative;
+}
+.chess .row:nth-child(even) {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 32px 0;
+  background-color: #0284A8;
+  color: #fff;
+}
 .widget {
   list-style: none;
 }
 .widget_container {
-  margin-bottom: 24px;
+  margin-bottom: 0;
   width: 100%;
+}
+#emblem {
+  height: 160px;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: -1px;
+  left: -18px;
+  transform: translateX(-100%);
+  z-index: 100;
 }
 #main-nav ul {
   display: flex;
-  margin: 0 0 0 20px;
-  margin-left: 0;
   padding: 0;
+  margin: 0;
+  margin-left: 0px;
   list-style: none;
 }
 #main-nav ul li a,
@@ -59,7 +86,7 @@ header, section, div, footer, nav {
   text-decoration: none;
   color: inherit;
   display: block;
-  padding: 24px 20px;
+  padding: 24px 18px;
 }
 #main-nav ul li a:hover {
   color: orange;
@@ -117,16 +144,22 @@ header:before {
 );
 	opacity: .4;
 }
+.main-header,
+.page-header  {
+  background-size: cover;
+}
+.main-header .row,
+.page-header .row  {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 .main-header {
   height: 480px;
-  background-size: cover;
   background-position: 80% center;
 }
 .page-header {
   min-height: 320px;
-  background-size: cover;
   background-position: center;
-  background-color: #5e5e5e;
 }
 .header-heading {
   position: absolute;
@@ -140,17 +173,13 @@ header:before {
 .header-heading .row{
   height: 100%;
 }
-a.btn-green,
-a:visited.btn-green {
-   font-weight: 500;
-   color: #fff;
-   text-decoration: none;
-}
 .btn-green {
   padding: 16px 16px;
   background-color: #07B57B;
   font-size: 16px;
-
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
   border: none;
@@ -160,18 +189,32 @@ a:visited.btn-green {
 .btn-green:hover {
   box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12),0 3px 5px -1px rgba(0,0,0,0.3);
 }
-.row {
-  padding: 12px 0;
+.main-header:after,
+.page-header:after,
+.chess .row:nth-child(even):after,
+.chess .row:nth-child(even):before  {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  transform-origin: right bottom;
+  transform: skewY(1.4deg);
+  z-index: -10;
+  background: inherit;
 }
-.row:last-child {
-  padding-bottom: 48px;
+.main-header:after,
+.page-header:after {
+  background: orange;
+  transform-origin: left bottom;
+  transform: skewY(1.8deg);
 }
-.chess .row:nth-child(even) {
-  background-color: #0284A8;
-  color: #fff;
+.chess .row:nth-child(even):after {
+  transform: skewY(-1.4deg);
 }
-.chess .row:nth-child(odd) {
-  background-color: #fff;
+.chess .row:nth-child(4n):before,
+.chess .row:nth-child(4n):after  {
+  transform-origin: left bottom;
 }
 .haitari-btn {
   display: inline-flex;
