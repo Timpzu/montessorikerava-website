@@ -172,6 +172,28 @@
   		'settings' => 'mkw_footer_heading_link',
       'type' => 'dropdown-pages',
   	)));
+    // Top navigation
+    $wp_customize->add_section('mkw_top_nav_section', array(
+  		'title' => 'Ylänavigaatio',
+  		'priority' => 32,
+  	));
+    $wp_customize->add_setting('mkw_top_nav_display', array(
+  		'default' => 'Yes',
+  	));
+  	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'mkw_top_nav_display_control', array(
+  		'label' => 'Näytetäänkö navigaatio?',
+  		'section' => 'mkw_top_nav_section',
+  		'settings' => 'mkw_top_nav_display',
+      'type' => 'select',
+      'choices' => array('No' => 'No', 'Yes' => 'Yes')
+  	)));
+    $wp_customize->add_setting('mkw_top_nav_link', array());
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'mkw_top_nav_link_control', array(
+      'label' => 'Linkitettävä sivu',
+      'section' => 'mkw_top_nav_section',
+      'settings' => 'mkw_top_nav_link',
+      'type' => 'dropdown-pages',
+    )));
   }
   add_action('customize_register', 'montessorikerava_customize_register');
 ?>

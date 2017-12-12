@@ -6,16 +6,28 @@
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
-    <nav class="container-fluid" id="main-nav">
-      <div class="col-md-5 offset-lg-3 offset-md-2">
-        <a href="<?php echo home_url(); ?>"><img id="emblem" alt="Montessoripäiväkoti Mio -logo" src="<?php echo get_template_directory_uri() ?>/img/logo-nauha2.svg"></a>
-        <button onclick="menuBtn()" class="nav-btn"><i class="material-icons">menu</i></button>
-        <?php
-          $args = array(
-            'theme_location' => 'primary'
-          );
-        ?>
-        <?php wp_nav_menu($args); ?>
+    <nav class="container-fluid">
+      <div id="main-nav" class="col-lg-8 offset-lg-2 offset-md-1 col-md-10">
+        <div class="emblem-container">
+          <a href="<?php echo home_url(); ?>"><img class="emblem" alt="Montessoripäiväkoti Mio -logo" src="<?php echo get_template_directory_uri() ?>/img/logo-nauha2.svg"></a>
+        </div>
+        <div class="main-menu-container">
+          <button onclick="menuBtn()" class="nav-btn"><i class="material-icons">menu</i></button>
+          <?php
+            $args = array(
+              'theme_location' => 'primary'
+            );
+          ?>
+          <?php wp_nav_menu($args); ?>
+        </div>
+        <?php if (get_theme_mod('mkw_top_nav_display') == 'Yes'): ?>
+        <div class="top-menu-container">
+            <ul>
+              <li><a href="<?php echo get_permalink(get_theme_mod('mkw_top_nav_link')); ?>">
+                  <?php echo get_the_title(get_theme_mod('mkw_top_nav_link')); ?></a></li>
+            </ul>
+        </div>
+        <?php endif; ?>
       </div>
     </nav>
     <header class="main-header" style="background-image:url(<?php header_image(); ?>);">
