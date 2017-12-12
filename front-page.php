@@ -24,8 +24,8 @@
           ?>
           <p class="mySlides">“<cite><?php echo $content; ?></cite>”</p>
           <?php endwhile; ?>
-          <button class="material-icons carousel-btn carousel-btn-left" onclick="plusDivs(-1)">&#xE314;</button>
-          <button class="material-icons carousel-btn carousel-btn-right" onclick="plusDivs(+1)">&#xE315;</button>
+          <button class="material-icons carousel-btn carousel-btn-left" onclick="plusDivs(-1)">keyboard_arrow_left</button>
+          <button class="material-icons carousel-btn carousel-btn-right" onclick="plusDivs(+1)">keyboard_arrow_right</button>
         </div>
       </section>
     </div>
@@ -37,7 +37,7 @@
       </section>
     </div>
   <?php endif; ?>
-  <script type="text/javascript">
+  <script>
     var slideIndex = 1;
     showDivs(slideIndex);
 

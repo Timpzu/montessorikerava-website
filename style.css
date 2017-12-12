@@ -1,6 +1,7 @@
 /*
 Theme Name: Montessoripäiväkoti Mio
 Author: Timo
+Description: Theme for montessori daycare Mio in Kerava.
 Version: 1.0
 */
 body {
@@ -98,7 +99,7 @@ main.container-fluid {
   font-weight: 600;
   color: inherit;
   display: block;
-  padding: 24px 18px;
+  padding: 24px 15px;
 }
 #main-nav ul li a:hover,
 #main-nav ul li.current-menu-item a:link,

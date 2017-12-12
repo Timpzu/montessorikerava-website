@@ -3,9 +3,13 @@
   function getStyle() {
     wp_register_style('normalize', get_template_directory_uri() .'/css/normalize.min.css');
     wp_register_style('grid', get_template_directory_uri() .'/css/bootstrap-grid.min.css');
+    wp_register_style('google-fonts', 'https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans:400,600', false);
+    wp_register_style('material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', false);
     wp_register_style('style', get_stylesheet_uri());
     wp_enqueue_style('normalize');
     wp_enqueue_style('grid');
+    wp_enqueue_style('google-fonts');
+    wp_enqueue_style('material-icons');
     wp_enqueue_style('style');
   }
   add_action('wp_enqueue_scripts', 'getStyle');
@@ -38,6 +42,9 @@
     // Page header image
     add_theme_support('post-thumbnails');
     add_image_size('page-header', 1280, 280);
+
+    // Title tag
+    add_theme_support( 'title-tag' );
   }
   add_action('after_setup_theme', 'themeSetup');
 
@@ -63,8 +70,10 @@
     ));
   }
   add_action('widgets_init','widgets_area_init');
+
   // Customization options
   function montessorikerava_customize_register( $wp_customize ) {
+
     // Custom header
   	$wp_customize->add_section('mkw_headline_section', array(
   		'title' => 'Ylätunniste',
@@ -105,6 +114,7 @@
   		'settings' => 'mkw_headline_link',
       'type' => 'dropdown-pages',
   	)));
+
     // Custom footer
     $wp_customize->add_section('mkw_footer_section', array(
   		'title' => 'Alatunniste',

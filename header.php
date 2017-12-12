@@ -3,15 +3,12 @@
   <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php bloginfo('name') ?></title>
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600|Open+Sans:400,600" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
     <nav class="container-fluid" id="main-nav">
-      <div class="col-md-5 offset-md-3">
-        <a href="<?php echo home_url(); ?>"><img id="emblem" src="<?php echo get_template_directory_uri() ?>/img/logo-nauha2.svg"></a>
+      <div class="col-md-5 offset-lg-3 offset-md-2">
+        <a href="<?php echo home_url(); ?>"><img id="emblem" alt="Montessoripäiväkoti Mio -logo" src="<?php echo get_template_directory_uri() ?>/img/logo-nauha2.svg"></a>
         <button onclick="menuBtn()" class="nav-btn"><i class="material-icons">menu</i></button>
         <?php
           $args = array(
