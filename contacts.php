@@ -14,22 +14,20 @@
        ?>
     </section>
   </div>
-  <?php if( have_rows('henkilokunta') ): ?>
+  <?php if( have_rows('staff') ): ?>
   	<div class="row justify-content-center">
       <section class="col-lg-6 col-md-8">
-        <h3>Henkilökunta</h3>
+        <h3><?php the_field('heading'); ?></h3>
         <div class="row">
-          <?php while( have_rows('henkilokunta') ): the_row();
+          <?php while( have_rows('staff') ): the_row();
         		$name = get_sub_field('name');
-            $contact = get_sub_field('contact');
         		$title = get_sub_field('title');
         		$photo = get_sub_field('photo');
       		?>
-            <article class="col-6 person">
+            <article class="col-sm-6 col-xs-12 person">
               <img src="<?php echo $photo['url']; ?>" alt="<?php echo $photo['alt'] ?>" />
               <h4><?php echo $name; ?></h4>
-              <span><?php echo $contact; ?></span>
-              <p><?php echo $title; ?></p>
+              <?php echo $title; ?>
         		</article>
           <?php endwhile; ?>
         </div>

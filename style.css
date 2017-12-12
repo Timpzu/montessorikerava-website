@@ -384,9 +384,24 @@ header:before {
   text-align: center;
 }
 
-.x {
-  height: 32px;
-  width: 100%;
-
-
+.person {
+  text-align: center;
+}
+.person h4 {
+  margin-bottom: 0;
+}
+.person p {
+  margin: 12px 0;
+}
+.person p:last-child {
+  margin-bottom: 32px;
+}
+.seloste {
+  font-size: 15px;
+  display: block;
+  opacity: 0.54;
+  margin-top: 6px;
+}
+.seloste:first-child {
+  margin-top: 12px;
 }

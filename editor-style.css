@@ -2,6 +2,9 @@
   font-size: 19px;
   line-height: 28px;
 }
-.ingressi i {
-  vertical-align: bottom;
+.seloste {
+  font-size: 15px;
+  display: block;
+  opacity: 0.54;
+  margin-top: 12px;
 }
