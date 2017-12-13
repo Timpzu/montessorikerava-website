@@ -16,7 +16,7 @@
   </div>
   <?php if( have_rows('staff') ): ?>
   	<div class="row justify-content-center">
-      <section class="col-lg-6 col-md-8">
+      <section id="staff" class="col-lg-6 col-md-8">
         <h3><?php the_field('heading'); ?></h3>
         <div class="row">
           <?php while( have_rows('staff') ): the_row();
