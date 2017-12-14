@@ -7,7 +7,6 @@
         <li><?php echo get_theme_mod('mkw_footer_address'); ?></li>
         <li><?php echo get_theme_mod('mkw_footer_phone'); ?></li>
         <li><?php echo get_theme_mod('mkw_footer_email'); ?></li>
-        <li></li>
       </ul>
       <p>
         <?php echo get_theme_mod('mkw_footer_open'); ?>

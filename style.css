@@ -33,6 +33,9 @@ p {
   line-height: 24px;
   margin-bottom: 23px;
 }
+p:last-of-type {
+  margin-bottom: 0;
+}
 ul {
   padding: 0;
   list-style: none;
@@ -66,17 +69,17 @@ header, section, footer, a, nav, div  {
 }
 main.container-fluid {
   margin-top: 60px;
-  margin-bottom: 60px;
+  margin-bottom: 102px;
 }
 .row {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 60px;
+  margin-bottom: 60px;
   position: relative;
 }
 .chess .row:nth-child(even) {
-  margin-top: 60px;
-  margin-bottom: 60px;
-  padding: 32px 0;
+  margin-top: 92px;
+  margin-bottom: 92px;
+  padding: 62px 0;
   background-color: #4694bd;
   color: #fff;
 }
@@ -246,6 +249,7 @@ header:before {
 }
 .main-header:after,
 .page-header:after,
+.footer-main:after,
 .chess .row:nth-child(even):after,
 .chess .row:nth-child(even):before  {
   content: '';
@@ -259,10 +263,15 @@ header:before {
   background: inherit;
 }
 .main-header:after,
-.page-header:after {
+.page-header:after,
+.footer-main:after {
   background: #e4a131;
   transform-origin: left bottom;
   transform: skewY(1.8deg);
+}
+.footer-main:after {
+  left: 0;
+  transform-origin: right bottom;
 }
 .chess .row:nth-child(even):after {
   transform: skewY(-1.4deg);
@@ -294,6 +303,9 @@ header:before {
 .comments-carousel h3 {
   text-align: center;
 }
+#accordions {
+  margin: 30px auto;
+}
 .haitari-btn {
   display: inline-flex;
   width: 100%;
@@ -319,7 +331,7 @@ header:before {
   display: block;
 }
 #staff {
-  margin-bottom: -30px;
+  margin-bottom: -90px;
 }
 .person {
   text-align: center;
@@ -336,6 +348,7 @@ header:before {
   height: auto;
 }
 .footer-main {
+  position: relative;
   background-color: #235b80;
   color: #fff;
   line-height: 24px;

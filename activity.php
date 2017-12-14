@@ -19,7 +19,7 @@
         $heading = get_sub_field('heading');
         $content = get_sub_field('content');
       ?>
-      <div class="row justify-content-center">
+      <div class="row justify-content-center" id="accordions">
         <section class="col-lg-6 col-md-8 haitari">
           <h3 class="haitari-btn" role="button" tabindex="0" aria-pressed="false" onclick="handleBtnClick(event)" onKeyPress="handleBtnKeyPress(event)">
             <?php echo $heading; ?>
