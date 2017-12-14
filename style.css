@@ -40,13 +40,16 @@ ul {
   padding: 0;
   list-style: none;
 }
-a {
+a, a:visited {
   text-decoration: none;
+  text-transform: none;
+  color: #082538;
 }
 .ingressi {
   font-size: 19px;
-  line-height: 28px;
-  opacity: 0.87;
+  line-height: 29px;
+  opacity: 1;
+  color: #235b80;
 }
 .seloste {
   font-size: 15px;
@@ -110,6 +113,14 @@ main.container-fluid {
   left: -160px;
   z-index: 10;
 }
+#emblem-mobile {
+  top: 0;
+  left: 15px;
+  margin: auto;
+  display: none;
+  height: 92px;
+  width: auto;
+}
 #main-nav {
   display: flex;
   align-items: flex-end;
@@ -165,12 +176,15 @@ main.container-fluid {
   margin: 0;
 }
 .nav-btn {
-  height: 64px;
-  width: 64px;
+  height: 92px;
+  width: 92px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 .nav-btn i {
-  font-size: 32px;
-  color: #000;
+  font-size: 36px;
+  color: #fff;
 }
 .nav-btn i:hover {
   color: #e4a131;
@@ -354,6 +368,10 @@ header:before {
   line-height: 24px;
   padding-bottom: 36px;
 }
+.footer-main .row {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 .footer-main a,
 .footer-main a:visited {
   color: #becb50;
@@ -433,14 +451,22 @@ header:before {
   #emblem {
     display: none;
   }
+  #emblem-mobile {
+    display: block;
+  }
   #main-nav {
     height: auto;
     display: block;
     margin-left: 0;
     width: auto;
+    background-color: #4694bd;
   }
   #main-nav ul {
     display: none;
+    background-color: #fff;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding: 15px 0;
   }
   #main-nav ul.visible {
     display: block;
