@@ -4,6 +4,6 @@ As a part of a user-centred design project course at Metropolia University of Ap
 
 ### Project team:
 
-Elmiina Ojala, Web Designer
-Roosa Kotilainen, Project Manager
+Elmiina Ojala, Web Designer<br>
+Roosa Kotilainen, Project Manager<br>
 Timo Lehtonen, Developer
