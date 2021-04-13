@@ -11,7 +11,7 @@
       <p>
         <?php echo get_theme_mod('mkw_footer_open'); ?>
       </p>
-      <nav id="footer-nav">
+      <nav id="footer-nav" aria-label="Alaviitteen navigaatio">
         <?php
           $args = array(
             'theme_location' => 'footer'

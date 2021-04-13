@@ -24,8 +24,8 @@
           ?>
           <p class="mySlides">“<cite><?php echo $content; ?></cite>”</p>
           <?php endwhile; ?>
-          <button class="material-icons carousel-btn carousel-btn-left" onclick="plusDivs(-1)">keyboard_arrow_left</button>
-          <button class="material-icons carousel-btn carousel-btn-right" onclick="plusDivs(+1)">keyboard_arrow_right</button>
+          <button class="material-icons carousel-btn carousel-btn-left" onclick="plusDivs(-1)" aria-label="Edellinen kommentti">keyboard_arrow_left</button>
+          <button class="material-icons carousel-btn carousel-btn-right" onclick="plusDivs(+1)" aria-label="Seuraava kommentti">keyboard_arrow_right</button>
         </div>
       </section>
     </div>

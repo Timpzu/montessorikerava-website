@@ -1,11 +1,14 @@
 // Menu button
 function menuBtn() {
-  var x = document.querySelector('.menu');
-  if (x.className === 'menu') {
-    x.className += ' visible';
+  var mobile_menu = document.querySelector('.menu');
+  var menu_button = document.getElementById('mobile-nav-button');
+  if (mobile_menu.className === 'menu') {
+    mobile_menu.className += ' visible';
+    menu_button.setAttribute("aria-expanded", "true");
   }
   else {
-    x.className = 'menu';
+    mobile_menu.className = 'menu';
+    menu_button.setAttribute("aria-expanded", "false");
   }
 }
 // Accordion actions
